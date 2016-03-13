@@ -1,0 +1,85 @@
+<!Doctype html>
+<html ng-app="pluma">
+<head>
+	<base href='/'>
+	<title>Pluma</title>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" >
+</head>
+<body ng-controller="mainController as main" ng-init="init()">
+
+	<header>
+		<div class="navbar navbar-dark bg-primary" style="color:#fff;">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="/" class="navar-brand">
+						 
+                        <h1 style="color:white;">
+                            <span>
+                                <i class="fa-2x fa fa-truck"></i>
+                            </span>Pluma coding challenge
+                        </h1>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="container">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 " align="center" >
+                    <form method="post" ng-submit="main.send()">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                             <label for="message">Enter your Message</label>
+                        </div>
+                         <div class="panel-body"
+                            <div class="form-group">
+
+                                <br/>
+                                <input class="form-control" id="address" type="text" name="message" value=""
+                                 palceholder="message" ng-model="main.message"required>
+
+                            </div>
+                        
+                        <div class="form-group">
+                             <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                </div>
+                     </div>
+                    </form>
+                    <div class="row" >
+                        <div class="col-md-3">
+
+                        </div>
+                        <div class="col-md-10 col-md-offset-1" >
+                            <div class="row">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                       <div class="form-group">
+                                            <button class="btn btn-danger" ng-click="history()">History</button>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" ng-repeat="each in messagehist | reverse">
+                                         <p>Message:{{each.message}}</p>&shy;&shy;
+                                        <p>TimeStamp: {{each.timeStamp}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+		</div>
+	</main>
+	<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="../app/app.js"></script>
+    <script type="text/javascript" src="../app/controllers/mainCtrl.js"></script>
+    <script type="text/javascript" src="../app/directive.js"></script>
+	
+</body>
+</html>

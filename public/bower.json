@@ -1,0 +1,28 @@
+{
+  "name": "Pluma",
+  "authors": [
+    "joga commuri <jogacommuri@yahoo.com>"
+  ],
+  "description": "pluma angular js coding challenge",
+  "main": "app.js",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.0"
+  }
+}
